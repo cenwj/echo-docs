@@ -175,6 +175,7 @@ type Cmdable interface {
 	XRead(a *XReadArgs) *XStreamSliceCmd
 	XReadStreams(streams ...string) *XStreamSliceCmd
 	XGroupCreate(stream, group, start string) *StatusCmd
+	XGroupCreateMkStream(stream, group, start string) *StatusCmd
 	XGroupSetID(stream, group, start string) *StatusCmd
 	XGroupDestroy(stream, group string) *IntCmd
 	XGroupDelConsumer(stream, group, consumer string) *IntCmd
@@ -231,6 +232,7 @@ type Cmdable interface {
 	ClientKillByFilter(keys ...string) *IntCmd
 	ClientList() *StringCmd
 	ClientPause(dur time.Duration) *BoolCmd
+	ClientID() *IntCmd
 	ConfigGet(parameter string) *SliceCmd
 	ConfigResetStat() *StatusCmd
 	ConfigSet(parameter, value string) *StatusCmd
@@ -1423,6 +1425,12 @@ func (c *cmdable) XGroupCreate(stream, group, start string) *StatusCmd {
 	return cmd
 }
 
+func (c *cmdable) XGroupCreateMkStream(stream, group, start string) *StatusCmd {
+	cmd := NewStatusCmd("xgroup", "create", stream, group, start, "mkstream")
+	c.process(cmd)
+	return cmd
+}
+
 func (c *cmdable) XGroupSetID(stream, group, start string) *StatusCmd {
 	cmd := NewStatusCmd("xgroup", "setid", stream, group, start)
 	c.process(cmd)
@@ -2057,6 +2065,24 @@ func (c *cmdable) ClientList() *StringCmd {
 
 func (c *cmdable) ClientPause(dur time.Duration) *BoolCmd {
 	cmd := NewBoolCmd("client", "pause", formatMs(dur))
+	c.process(cmd)
+	return cmd
+}
+
+func (c *cmdable) ClientID() *IntCmd {
+	cmd := NewIntCmd("client", "id")
+	c.process(cmd)
+	return cmd
+}
+
+func (c *cmdable) ClientUnblock(id int64) *IntCmd {
+	cmd := NewIntCmd("client", "unblock", id)
+	c.process(cmd)
+	return cmd
+}
+
+func (c *cmdable) ClientUnblockWithError(id int64) *IntCmd {
+	cmd := NewIntCmd("client", "unblock", id, "error")
 	c.process(cmd)
 	return cmd
 }

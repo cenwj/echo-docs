@@ -1,13 +1,14 @@
 package main
 
 import (
-	"echo-docs/conf"
-	"echo-docs/db"
-	"echo-docs/route"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/cenwj/echo-docs/conf"
+	"github.com/cenwj/echo-docs/db"
+	"github.com/cenwj/echo-docs/route"
 )
 
 func main() {

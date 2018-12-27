@@ -1,7 +1,7 @@
 package db
 
 import (
-	"echo-docs/conf"
+	"github.com/cenwj/echo-docs/conf"
 	"github.com/go-redis/redis"
 )
 

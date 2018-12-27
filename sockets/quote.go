@@ -1,17 +1,19 @@
 package sockets
+
 import (
 	"bytes"
 
 	"fmt"
-	"github.com/google/uuid"
-	"net"
-	"time"
 	"io"
-	"unsafe"
-	"reflect"
-	"github.com/syyongx/php2go"
 	"log"
-	"echo-docs/conf"
+	"net"
+	"reflect"
+	"time"
+	"unsafe"
+
+	"github.com/cenwj/echo-docs/conf"
+	"github.com/google/uuid"
+	"github.com/syyongx/php2go"
 )
 
 // ByteString converts []byte to string without memory allocation by block magic
@@ -39,7 +41,7 @@ func GetLoginData() string {
 	data["LoginTime"] = loginTime
 	data["DevId"] = DevId
 	data["Token"] = php2go.Md5(conf.Config().Quote.QPsswd + loginTime + conf.Config().Quote.QUName + DevId)
-	BytesData, _ := php2go.JsonEncode(data)
+	BytesData, _ := php2go.JSONEncode(data)
 	bodyExcept := len(BytesData) / 256
 	bodyFmod := len(BytesData) % 256
 	byteslist := []byte{1, 2, 3, byte(bodyExcept), byte(bodyFmod)}
@@ -55,7 +57,7 @@ func GetResult(symbols []string) string {
 	data["Params"] = symbols
 	data["RequestNo"] = "0"
 	data["ServiceCode"] = "00001"
-	BytesData, _ := php2go.JsonEncode(data)
+	BytesData, _ := php2go.JSONEncode(data)
 	bodyExcept := len(BytesData) / 256
 	bodyFmod := len(BytesData) % 256
 	byteslist := []byte{1, 3, 3, byte(bodyExcept), byte(bodyFmod)}

@@ -1,9 +1,10 @@
 package admin
 
 import (
-	"echo-docs/template"
-	"github.com/labstack/echo"
 	"net/http"
+
+	"github.com/cenwj/echo-docs/template"
+	"github.com/labstack/echo"
 )
 
 func Index(c echo.Context) error {
@@ -12,7 +13,6 @@ func Index(c echo.Context) error {
 		"index",
 		echo.Map{"title": "test"})
 }
-
 
 func Login(c echo.Context) error {
 	return template.Render(c,

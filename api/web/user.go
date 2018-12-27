@@ -1,9 +1,10 @@
 package web
 
 import (
-	"echo-docs/db"
-	"echo-docs/model"
 	"net/http"
+
+	"github.com/cenwj/echo-docs/db"
+	"github.com/cenwj/echo-docs/model"
 
 	"github.com/labstack/echo"
 )

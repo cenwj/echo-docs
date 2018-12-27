@@ -1,8 +1,9 @@
 package db
 
 import (
-	"echo-docs/conf"
 	"fmt"
+
+	"github.com/cenwj/echo-docs/conf"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )

@@ -3,8 +3,8 @@ package web
 import (
 	"net/http"
 
+	"github.com/cenwj/echo-docs/template"
 	"github.com/labstack/echo"
-	"echo-docs/template"
 )
 
 func Home(c echo.Context) error {

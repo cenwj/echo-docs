@@ -1,13 +1,13 @@
 package route
 
 import (
-	"echo-docs/api/admin"
-	"echo-docs/api/web"
+	"github.com/cenwj/echo-docs/api/admin"
+	"github.com/cenwj/echo-docs/api/web"
 
-	"echo-docs/template"
+	"github.com/cenwj/echo-docs/sockets"
+	"github.com/cenwj/echo-docs/template"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"echo-docs/sockets"
 )
 
 func Init() *echo.Echo {
