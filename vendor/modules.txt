@@ -1,0 +1,53 @@
+# github.com/BurntSushi/toml v0.3.1
+github.com/BurntSushi/toml
+# github.com/dgrijalva/jwt-go v3.1.0+incompatible
+github.com/dgrijalva/jwt-go
+# github.com/ghodss/yaml v0.0.0-20180820084758-c7ce16629ff4
+github.com/ghodss/yaml
+# github.com/go-redis/redis v0.0.0-20181124113257-8238d9a02746
+github.com/go-redis/redis
+github.com/go-redis/redis/internal
+github.com/go-redis/redis/internal/consistenthash
+github.com/go-redis/redis/internal/hashtag
+github.com/go-redis/redis/internal/pool
+github.com/go-redis/redis/internal/proto
+github.com/go-redis/redis/internal/singleflight
+github.com/go-redis/redis/internal/util
+# github.com/go-sql-driver/mysql v0.0.0-20171012083118-eb92a8dc628c
+github.com/go-sql-driver/mysql
+# github.com/google/uuid v1.1.0
+github.com/google/uuid
+# github.com/gorilla/websocket v0.0.0-20171013020858-71fa72d48423
+github.com/gorilla/websocket
+# github.com/jinzhu/gorm v1.9.2
+github.com/jinzhu/gorm
+github.com/jinzhu/gorm/dialects/mysql
+# github.com/jinzhu/inflection v0.0.0-20180308033659-04140366298a
+github.com/jinzhu/inflection
+# github.com/labstack/echo v0.0.0-20180113194039-b6040409eece
+github.com/labstack/echo
+github.com/labstack/echo/middleware
+# github.com/labstack/gommon v0.0.0-20170925052817-57409ada9da0
+github.com/labstack/gommon/color
+github.com/labstack/gommon/log
+github.com/labstack/gommon/bytes
+github.com/labstack/gommon/random
+# github.com/mattn/go-colorable v0.0.0-20180115155639-6cc8b475d468
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.4
+github.com/mattn/go-isatty
+# github.com/syyongx/php2go v0.0.0-20181128020346-fc0f3ee0f08a
+github.com/syyongx/php2go
+# github.com/tkanos/gonfig v0.0.0-20181112185242-896f3d81fadf
+github.com/tkanos/gonfig
+# github.com/valyala/bytebufferpool v1.0.0
+github.com/valyala/bytebufferpool
+# github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4
+github.com/valyala/fasttemplate
+# golang.org/x/crypto v0.0.0-20180119074636-ee41a25c63fb
+golang.org/x/crypto/acme/autocert
+golang.org/x/crypto/acme
+# golang.org/x/sys v0.0.0-20181221143128-b4a75ba826a6
+golang.org/x/sys/unix
+# gopkg.in/yaml.v2 v2.2.1
+gopkg.in/yaml.v2

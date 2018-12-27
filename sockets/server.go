@@ -1,8 +1,9 @@
 package sockets
 
 import (
-	"echo-web/module/log"
 	"fmt"
+	"log"
+
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo"
 )
